@@ -6,7 +6,11 @@ GEM
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
       rspec-mocks (~> 3.5.0)
+<<<<<<< HEAD
     rspec-core (3.5.1)
+=======
+    rspec-core (3.5.0)
+>>>>>>> 325d8101e80e3ef623602f1d07a2825a49c525bb
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -23,7 +27,11 @@ DEPENDENCIES
   rspec
 
 RUBY VERSION
+<<<<<<< HEAD
    ruby 2.3.1p112
+=======
+   ruby 2.3.0p0
+>>>>>>> 325d8101e80e3ef623602f1d07a2825a49c525bb
 
 BUNDLED WITH
    1.12.5
