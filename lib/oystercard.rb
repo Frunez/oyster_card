@@ -24,22 +24,22 @@ attr_reader :journey_history, :journey
     !!@journey
   end
 
-  def touch_in!(station)
+  def touch_in!(entry_station)
     raise 'Balance too low, please top up your card' if balance < MINIMUM_BALANCE
     charge_and_close if @journey
-    create_new_journey
-    @journey.start_journey(station)
+    #journey_log.start
+    create_new_journey(entry_station)
   end
 
-  def touch_out!(station)
+  def touch_out!(exit_station)
     create_new_journey unless @journey
-    @journey.end_journey(station)
+    @journey.end_journey(exit_station)
     charge_and_close
   end
 
 private
-  def create_new_journey
-    @journey = Journey.new
+  def create_new_journey(entry_station = nil)
+    @journey = Journey.new(entry_station)
   end
 
   def charge_and_close
